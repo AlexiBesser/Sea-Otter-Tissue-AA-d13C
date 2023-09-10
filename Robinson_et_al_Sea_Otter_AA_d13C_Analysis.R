@@ -28,8 +28,7 @@ AA.Tissue.Ott$Tyr13C <- NULL
 AA.Tissue.Ott$Lys13C <- NULL
 
 # removing metadata columns that will not be used for statistical analyses
-AA.Tissue.Ott$Date_Found <- NULL
-AA.Tissue.Ott$Necropsy_Date <- NULL
+AA.Tissue.Ott$Date <- NULL
 AA.Tissue.Ott$Condition <- NULL
 AA.Tissue.Ott$Age <- NULL
 
@@ -477,7 +476,7 @@ sum(diag(prop.table(ct.prod.2.nolys)))
 
 # now pull out just the essential AA data from sea otter tissue dataset:
 # loading in corrected data for UCM standard - see SI1 for details. 
-AA.Tissue.Ott <- read.csv("Corrected_Lda_Data.csv",header=T)
+AA.Tissue.Ott <- read.csv("Corrected_LDA_Data.csv", header=T)
 # removing variable Lys data
 Ess.nolys <- subset(AA.Tissue.Ott, select = c(Individual, Ile13C, Leu13C, Phe13C, Thr13C, Val13C, Tissue))
 
